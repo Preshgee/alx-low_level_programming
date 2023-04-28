@@ -1,12 +1,15 @@
 #include "main.h"
 /**
- * print_square - Prints n squares according n number of times
- * @size: The number of squares/number of times
+ * print_triangle - Prints a triangle of squares according parameter
+ * @size: The size of the squares triangle
  * Return: empty
  */
-void print_square(int size)
+
+void print_triangle(int size)
+
 {
-	int x, y;
+
+	int x, y, z;
 
 	if (size <= 0)
 	{
@@ -16,7 +19,11 @@ void print_square(int size)
 	{
 	for (x = 0; x < size; x++)
 	{
-	for (y = 0; y < size; y++)
+	for (y = size - x; y > 1; y--)
+	{
+	_putchar(32);
+	}
+	for (z = 0; z <= x; z++)
 	{
 	_putchar(35);
 	}
