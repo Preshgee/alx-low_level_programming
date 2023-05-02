@@ -5,13 +5,10 @@
 /**
  * _strlen - Returns the length of a string
  * @str: The string whose length would be gotten
- * Return: 0
+ * Return: length of string:
  */
 
-int _strlen(char *str)
+int _strlen(char *s)
 {
-
-	int len = strlen(str);
-	printf("%d\n", len);
-	return (0);
+	return strlen(s);
 }
