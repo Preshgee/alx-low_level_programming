@@ -4,11 +4,19 @@
 
 /**
  * _strlen - Returns the length of a string
- * @str: The string whose length would be gotten
+ * @s: The string whose length would be gotten
  * Return: length of string:
  */
 
 int _strlen(char *s)
 {
-	return strlen(s);
+	int len = 0;
+
+	while (*s != '0')
+	{
+		len++;
+		s++;
+	}
+
+	return (len - 1);
 }
