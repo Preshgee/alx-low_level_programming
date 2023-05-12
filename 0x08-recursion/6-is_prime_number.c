@@ -26,20 +26,15 @@ int is_prime_number(int n)
 int check_prime(int n, int i)
 {
 
-	if (i != 1)
-	{
-		if (n % i != 0)
-		{
-			return (check_prime(n, i - 1));
-		}
-		else
-		{
-			return (0);
-		}
-	}
-	else
-	{
+	if (i <= 1)
+		return (0);
+
+	if (n % i == 0 && i > 1)
+		return (0);
+
+	if ((n / i) < i)
 		return (1);
-	}
+
+	return (check_prime(n, i + 1));
 }
 
