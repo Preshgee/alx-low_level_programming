@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -6,6 +7,8 @@
  * @name: data type member 1
  * @age: data type member 2
  * @owner: data type member 3
+ *
+ * Return: new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -31,7 +34,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(g);
 		return (NULL);
 	}
-	b = malloc(d +1);
+	b = malloc(d + 1);
 	if (b != NULL)
 	{
 		for (f = 0; f <= d; f++)
