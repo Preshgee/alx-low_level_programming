@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * print_number - prints number
+ * print_numbers - prints number
  * @separator: the string to be printed btw numbers
  * @n: number of integers passed
  *
@@ -20,7 +20,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		if (!separator)
 			printf("%d", va_arg(valist, int));
-		else if (separator && i ==0)
+		else if (separator && i == 0)
 			printf("%d", va_arg(valist, int));
 		else
 			printf("%s%d", separator, va_arg(valist, int));
