@@ -24,10 +24,10 @@ char *_strdup(char *str)
 	w = malloc((len + 1) * sizeof(char));
 
 	if (w == NULL)
-	       return (NULL);
-	
+		return (NULL);
+
 	while ((w[i] = str[i]) != '\0')
 	i++;
-	
+
 	return (w);
-}	
+}
