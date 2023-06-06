@@ -1,4 +1,7 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * add_nodeint - adds a new node at the beginning of a linked list
@@ -9,15 +12,14 @@
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *add;
+	struct listint_s *tmp = NULL;
 
-	add = malloc(sizeof(listint_t));
-	if (!add)
+	tmp = (struct listint_s *)malloc(sizeof(struct listint_s));
+	if (tmp == NULL)
 		return (NULL);
+	tmp->n = n;
+	tmp->next = *head;
+	*head = tmp;
+	return (tmp);
 
-	(*add).n = n;
-	(*add).next = *head;
-	*head = add;
-
-	return (add);
 }
