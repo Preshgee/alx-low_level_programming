@@ -9,17 +9,17 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	int a;
+	int i;
 
-	a = 0;
+	i = 0;
 	while (h != NULL)
 	{
 		{
 			printf("%d", (*h).n);
-			a++;
+			i++;
 			h = (*h).next;
 			printf("\n");
 		}
 	}
-	return (a);
+	return (i);
 }
